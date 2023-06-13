@@ -9,44 +9,14 @@ import { Link as ScrollLink } from 'react-scroll'
 import { StyledButton } from '@/components/styled-button'
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'
 import YouTube, { YouTubeProps } from 'react-youtube'
+import StoreImg from '../logo/store'
 
-interface Exp {
-  label: string
-  value: string
-}
-interface ExpItemProps {
-  item: Exp
-}
-
-const exps: Array<Exp> = [
-  {
-    label: 'Students',
-    value: '10K+',
-  },
-  {
-    label: 'Quality Course',
-    value: '20+',
-  },
-  {
-    label: 'Experience Mentors',
-    value: '10+',
-  },
-]
-
-const ExpItem: FC<ExpItemProps> = ({ item }) => {
-  const { value, label } = item
-  return (
-    <Box sx={{ textAlign: 'center', mb: { xs: 1, md: 0 } }}>
-      <Typography
-        sx={{ color: 'secondary.main', mb: { xs: 1, md: 2 }, fontSize: { xs: 34, md: 44 }, fontWeight: 'bold' }}
-      >
-        {value}
-      </Typography>
-      <Typography color="text.secondary" variant="h5">
-        {label}
-      </Typography>
-    </Box>
-  )
+const storeImages = {
+  iOS: 'http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg',
+  android: 'https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg',
+  chrome: 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg',
+  edge: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Edge_Logo_2019.svg',
+  firefox: 'https://upload.wikimedia.org/wikipedia/commons/2/28/Firefox_logo%2C_2017.svg',
 }
 
 const HomeHero: FC = () => {
@@ -250,13 +220,28 @@ const HomeHero: FC = () => {
         </Grid>
 
         {/* Experience */}
-        <Box sx={{ boxShadow: 2, py: 4, px: 7, borderRadius: 4 }}>
+        <Box
+          sx={{
+            boxShadow: '20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;',
+            py: 4,
+            px: 7,
+            borderRadius: 4,
+            marginTop: 3,
+          }}
+        >
           <Grid container spacing={2}>
-            {exps.map((item) => (
-              <Grid key={item.value} item xs={12} md={4}>
-                <ExpItem item={item} />
-              </Grid>
-            ))}
+            <Grid item xs={12} md={3}>
+              <StoreImg imgUrl={storeImages.chrome} targetUrl={''} title="Chrome Extension" />
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <StoreImg imgUrl={storeImages.edge} targetUrl={''} title="Edge Extension" />
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <StoreImg imgUrl={storeImages.iOS} targetUrl={''} />
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <StoreImg imgUrl={storeImages.android} targetUrl={''} />
+            </Grid>
           </Grid>
         </Box>
       </Container>
