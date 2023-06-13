@@ -30,6 +30,7 @@ const SliderArrow: FC<SliderArrowArrow> = (props) => {
         right: type === 'prev' ? '60px !important' : '0 !important',
         zIndex: 10,
         boxShadow: 1,
+        position: 'absolute',
       }}
       disableRipple
       color="inherit"
