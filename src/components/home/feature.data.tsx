@@ -12,23 +12,23 @@ interface Data {
 
 export const data: Data[] = [
   {
-    title: 'Easy Accessable',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    title: 'Share your info',
+    description: 'Utilizing generative AI tailored to your individual preferences',
     icon: <ArtTrackIcon />,
   },
   {
-    title: 'More Affordable Cost',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    title: 'State what you want',
+    description: 'Lazyvax expertly crafts a tailored plan just for you!',
     icon: <AttachMoneyIcon />,
   },
   {
-    title: 'Flexible Study Time',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    title: 'Make every step counts',
+    description: 'Follow suggested steps, adjust schedule and priorities as needed',
     icon: <LocalLibraryIcon />,
   },
   {
-    title: 'Consultation With Mentor',
-    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore',
+    title: 'Prevent distractions',
+    description: 'Lazyvax intervenes when you over-use distractions',
     icon: <ContactSupportIcon />,
   },
 ]

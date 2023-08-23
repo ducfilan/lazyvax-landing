@@ -63,7 +63,7 @@ const HomeTestimonial: FC = () => {
   }
 
   return (
-    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: 'background.paper' }}>
+    <Box id="testimonial" sx={{ pb: { xs: 6, md: 10 }, backgroundColor: '#f9feff' }}>
       <Container>
         <Grid container spacing={5}>
           <Grid item xs={12} md={6}>
@@ -78,7 +78,7 @@ const HomeTestimonial: FC = () => {
                 fontWeight: 'bold',
               }}
             >
-              Testimonial What our{' '}
+              Lazyvax wipes out digital{' '}
               <Typography
                 component="mark"
                 sx={{
@@ -89,20 +89,20 @@ const HomeTestimonial: FC = () => {
                   backgroundColor: 'unset',
                 }}
               >
-                Students{' '}
+                distractions{' '}
                 <Box
                   sx={{
                     position: 'absolute',
                     top: { xs: 20, md: 28 },
                     left: 2,
-                    '& img': { width: { xs: 130, md: 175 }, height: 'auto' },
+                    '& img': { width: { xs: 150, md: 220 }, height: 'auto' },
                   }}
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/images/headline-curve.svg" alt="Headline curve" />
                 </Box>
               </Typography>
-              Say
+              away
             </Typography>
 
             <StyledSlickContainer>
@@ -115,7 +115,7 @@ const HomeTestimonial: FC = () => {
           </Grid>
           <Grid item xs={12} md={6} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Box sx={{ width: { xs: '100%', md: '90%' } }}>
-              <Image src="/images/home-testimonial.png" width={520} height={540} quality={97} alt="Testimonial img" />
+              <Image src="/images/prevention.png" width={800} height={942} quality={97} alt="Distractions prevention" />
             </Box>
           </Grid>
         </Grid>

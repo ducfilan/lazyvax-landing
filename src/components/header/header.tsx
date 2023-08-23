@@ -44,7 +44,6 @@ const Header: FC = () => {
             }}
           >
             <Box /> {/* Magic space */}
-            <Navigation />
             <AuthNavigation />
             {visibleMenu && matchMobileView && (
               <IconButton

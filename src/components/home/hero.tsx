@@ -12,7 +12,7 @@ import YouTube, { YouTubeProps } from 'react-youtube'
 import StoreImg from '../logo/store'
 
 const storeImages = {
-  iOS: 'http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg',
+  iOS: 'https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg',
   android: 'https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg',
   chrome: 'https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg',
   edge: 'https://upload.wikimedia.org/wikipedia/commons/f/f6/Edge_Logo_2019.svg',
@@ -116,12 +116,25 @@ const HomeHero: FC = () => {
                 </Typography>
               </Box>
               <Box sx={{ '& button': { mr: 2 } }}>
-                <ScrollLink to="popular-course" spy={true} smooth={true} offset={0} duration={350}>
-                  <StyledButton color="primary" size="large" variant="contained">
-                    See HOW
-                  </StyledButton>
-                </ScrollLink>
-                <ScrollLink to="video-section" spy={true} smooth={true} offset={0} duration={350}>
+                <StyledButton
+                  color="primary"
+                  size="large"
+                  variant="contained"
+                  onClick={() => {
+                    window.location.href = 'https://app.lazyvax.com'
+                  }}
+                >
+                  Start now →
+                </StyledButton>
+
+                <ScrollLink
+                  to="video-section"
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={350}
+                  style={{ display: 'none' }}
+                >
                   <StyledButton
                     color="primary"
                     size="large"
@@ -206,7 +219,7 @@ const HomeHero: FC = () => {
                   component="h6"
                   sx={{ color: 'secondary.main', fontSize: '1.1rem', fontWeight: 700, mb: 0.5 }}
                 >
-                  Time
+                  You know what?
                 </Typography>
                 <Typography variant="subtitle1" sx={{ color: 'text.secondary', lineHeight: 1.3 }}>
                   Most of our time is on the Internet, but we don’t use it efficiently
@@ -231,16 +244,16 @@ const HomeHero: FC = () => {
         >
           <Grid container spacing={2}>
             <Grid item xs={12} md={3}>
-              <StoreImg imgUrl={storeImages.chrome} targetUrl={''} title="Chrome Extension" />
+              <StoreImg imgUrl={storeImages.chrome} targetUrl={'#'} title="Chrome Extension" />
             </Grid>
             <Grid item xs={12} md={3}>
-              <StoreImg imgUrl={storeImages.edge} targetUrl={''} title="Edge Extension" />
+              <StoreImg imgUrl={storeImages.edge} targetUrl={'#'} title="Edge Extension" />
             </Grid>
             <Grid item xs={12} md={3}>
-              <StoreImg imgUrl={storeImages.iOS} targetUrl={''} />
+              <StoreImg imgUrl={storeImages.iOS} targetUrl={'#'} />
             </Grid>
             <Grid item xs={12} md={3}>
-              <StoreImg imgUrl={storeImages.android} targetUrl={''} />
+              <StoreImg imgUrl={storeImages.android} targetUrl={'#'} />
             </Grid>
           </Grid>
         </Box>

@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import Box from '@mui/material/Box'
-import InputBase from '@mui/material/InputBase'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 import { StyledButton } from '../styled-button'
@@ -19,9 +18,9 @@ const HomeNewsLetter: FC = () => {
           }}
         >
           <Typography variant="h1" component="h2" sx={{ mb: 1, fontSize: { xs: 32, md: 42 } }}>
-            Subscribe to Our News Letter
+            Start working toward your goals today
           </Typography>
-          <Typography sx={{ mb: 6 }}>Subscribe to our newsletter to get information about our courses.</Typography>
+          <Typography sx={{ mb: 6 }}>Let it changed from now with Lazyvax!</Typography>
 
           <Box
             sx={{
@@ -33,21 +32,15 @@ const HomeNewsLetter: FC = () => {
               mx: 'auto',
             }}
           >
-            <InputBase
-              sx={{
-                backgroundColor: 'background.paper',
-                borderRadius: 3,
-                width: '100%',
-                height: 48,
-                px: 2,
-                mr: { xs: 0, md: 3 },
-                mb: { xs: 2, md: 0 },
-              }}
-              placeholder="Enter your Email Address"
-            />
             <Box>
-              <StyledButton disableHoverEffect size="large">
-                Subscribe
+              <StyledButton
+                disableHoverEffect
+                size="large"
+                onClick={() => {
+                  window.location.href = 'https://app.lazyvax.com'
+                }}
+              >
+                Start using now
               </StyledButton>
             </Box>
           </Box>

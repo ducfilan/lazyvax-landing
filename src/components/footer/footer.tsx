@@ -3,7 +3,6 @@ import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
-import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
 
 const Footer: FC = () => {
   return (
@@ -21,11 +20,7 @@ const Footer: FC = () => {
               <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
                 Lazyvax breaks down your general goals into actionable steps for you to follow.
               </Typography>
-              <FooterSocialLinks />
             </Box>
-          </Grid>
-          <Grid item xs={12} md={7}>
-            <FooterNavigation />
           </Grid>
         </Grid>
       </Container>
