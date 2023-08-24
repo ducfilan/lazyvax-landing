@@ -6,8 +6,8 @@ export const navigations: Navigation[] = [
     path: '#', // '/',
   },
   {
-    label: 'Courses',
-    path: 'popular-course', // '/popular-course',
+    label: 'How it works',
+    path: 'work-demo', // '/work-demo',
   },
   {
     label: 'Testimonial',

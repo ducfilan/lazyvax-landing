@@ -2,18 +2,16 @@ import React, { FC } from 'react'
 import Box from '@mui/material/Box'
 import Grid from '@mui/material/Grid'
 import { useTheme } from '@mui/material/styles'
-import { Typography, useMediaQuery } from '@mui/material'
+import { Typography } from '@mui/material'
 
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax'
 
 const HomePopularCourse: FC = () => {
-  const { breakpoints } = useTheme()
-  const matchMobileView = useMediaQuery(breakpoints.down('md'))
-
   return (
     <Box
-      id="popular-course"
+      id="work-demo"
       sx={{
+        display: { xs: 'none', md: 'block' },
         pt: {
           xs: 6,
           md: 8,
